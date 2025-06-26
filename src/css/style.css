@@ -1,0 +1,187 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$text-color: #333;
+$light-color: #ecf0f1;
+$dark-color: #2c3e50;
+$font-primary: "Montserrat", sans-serif;
+$font-secondary: "Roboto", sans-serif;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition($property) {
+  transition: $property 0.3s ease;
+}
+
+// Base Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-secondary;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-primary;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+  @include transition(color);
+
+  &:hover {
+    color: darken($primary-color, 15%);
+  }
+}
+
+// Layout
+.header {
+  background-color: $light-color;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-bar {
+  @include flex-center;
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+
+    .nav-item {
+      margin: 0 1rem;
+
+      .nav-link {
+        color: $dark-color;
+        font-weight: 700;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        @include transition(background-color);
+
+        &:hover {
+          background-color: rgba($primary-color, 0.1);
+        }
+      }
+    }
+  }
+}
+
+// Sections
+.hero-section {
+  height: 100vh;
+  @include flex-center;
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  color: white;
+  text-align: center;
+  padding-top: 60px; // Account for fixed header
+
+  .hero-content {
+    max-width: 800px;
+    padding: 2rem;
+
+    .hero-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      @include transition(all);
+
+      &-primary {
+        background-color: white;
+        color: $primary-color;
+
+        &:hover {
+          background-color: darken(white, 10%);
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: $primary-color;
+    margin: 1rem auto;
+  }
+}
+
+.about-section,
+.projects-section,
+.skills-section,
+.contact-section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Footer
+.footer {
+  background-color: $dark-color;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .nav-bar .nav-list {
+    flex-direction: column;
+    align-items: center;
+
+    .nav-item {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .hero-section .hero-content {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
