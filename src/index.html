@@ -1,82 +1,83 @@
-<section id="skills" class="skills-section">
-  <h2 class="section-title">My Skills</h2>
-  <div class="skills-container">
-    <div class="skills-category">
-      <h3 class="skills-category-title">Frontend Development</h3>
-      <ul class="skills-list">
-        <li class="skill-item">
-          <span class="skill-name">HTML5</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 95%"></div>
-          </div>
-        </li>
-        <li class="skill-item">
-          <span class="skill-name">CSS3/SCSS</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 90%"></div>
-          </div>
-        </li>
-        <li class="skill-item">
-          <span class="skill-name">JavaScript</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 85%"></div>
-          </div>
-        </li>
-        <li class="skill-item">
-          <span class="skill-name">React</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 80%"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Arya's professional portfolio showcasing skills and projects"
+    />
+    <title>Arya's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="skills-category">
-      <h3 class="skills-category-title">Design</h3>
-      <ul class="skills-list">
-        <li class="skill-item">
-          <span class="skill-name">UI/UX Design</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 85%"></div>
-          </div>
-        </li>
-        <li class="skill-item">
-          <span class="skill-name">Figma</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 90%"></div>
-          </div>
-        </li>
-        <li class="skill-item">
-          <span class="skill-name">Adobe Photoshop</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 75%"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
+    <main>
+      <section id="hero" class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Hi, I'm Arya</h1>
+          <p class="hero-subtitle">Frontend Developer & Designer</p>
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+        </div>
+      </section>
 
-    <div class="skills-category">
-      <h3 class="skills-category-title">Other</h3>
-      <ul class="skills-list">
-        <li class="skill-item">
-          <span class="skill-name">Git/GitHub</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 85%"></div>
-          </div>
-        </li>
-        <li class="skill-item">
-          <span class="skill-name">Responsive Design</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 90%"></div>
-          </div>
-        </li>
-        <li class="skill-item">
-          <span class="skill-name">Accessibility</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 80%"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+      <section id="about" class="about-section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p>
+            I'm a passionate developer with expertise in HTML, CSS, and
+            JavaScript. I create beautiful, responsive websites with a focus on
+            accessibility and user experience.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section">
+        <h2 class="section-title">My Projects</h2>
+        <div class="project-grid">
+          <!-- Project cards will go here -->
+        </div>
+      </section>
+
+      <section id="skills" class="skills-section">
+        <h2 class="section-title">Skills</h2>
+        <ul class="skills-list">
+          <!-- Skills will go here -->
+        </ul>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <h2 class="section-title">Get In Touch</h2>
+        <form class="contact-form">
+          <!-- Form elements will go here -->
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        &copy; <span id="year"></span> Arya's Portfolio. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
