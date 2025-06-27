@@ -363,10 +363,6 @@ a {
   .social-link {
     color: white;
     font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
     @include transition(all);
 
     &:hover {
@@ -374,19 +370,19 @@ a {
       transform: translateY(-3px);
     }
   }
+}
 
-  // Accessibility - hide text but keep it for screen readers
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
+// Accessibility - hide text but keep it for screen readers
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 // For larger screens, show text next to icons
