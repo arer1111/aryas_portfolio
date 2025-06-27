@@ -184,22 +184,60 @@
 
       <section id="contact" class="contact-section">
         <h2 class="section-title">Get In Touch</h2>
-        <form class="contact-form">
-          <!-- Form elements will go here -->
-        </form>
+        <div class="contact-methods">
+          <a href="mailto:Arya2003moholkar@gmail.com" class="contact-method">
+            <i class="fas fa-envelope contact-icon"></i>
+            <h3>Email</h3>
+            <p>Arya2003moholkar@gmail.com</p>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/arya-moholkar-03a4812aa"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-method"
+          >
+            <i class="fab fa-linkedin contact-icon"></i>
+            <h3>LinkedIn</h3>
+            <p>linkedin.com/in/arya-moholkar</p>
+          </a>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="social-links">
-        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+        <a
+          href="https://github.com/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+        >
+          <i class="fab fa-github"></i>
+          <span class="sr-only">GitHub</span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/arya-moholkar-03a4812aa"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+        >
+          <i class="fab fa-linkedin"></i>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+        <a href="mailto:Arya2003moholkar@gmail.com" class="social-link">
+          <i class="fas fa-envelope"></i>
+          <span class="sr-only">Email</span>
+        </a>
       </div>
       <p>
         &copy; <span id="year"></span> Arya's Portfolio. All rights reserved.
       </p>
     </footer>
+
+    <script>
+      // Simple script to update copyright year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
