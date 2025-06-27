@@ -143,12 +143,170 @@ a {
   }
 }
 
-.about-section,
-.projects-section,
-.skills-section,
-.contact-section {
+// About Section
+.about-section {
   padding: 5rem 2rem;
   max-width: 1200px;
+  margin: 0 auto;
+
+  .about-container {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .about-content {
+    flex: 1;
+  }
+
+  .about-text {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .about-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    background-color: rgba($primary-color, 0.1);
+    border-radius: 8px;
+    @include transition(transform);
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  .highlight-icon {
+    color: $primary-color;
+    font-size: 1.5rem;
+  }
+
+  .about-image {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-placeholder {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: $light-color;
+    @include flex-center;
+  }
+
+  .placeholder-icon {
+    font-size: 8rem;
+    color: rgba($primary-color, 0.3);
+  }
+}
+
+// Projects Section
+.projects-section {
+  padding: 5rem 2rem;
+  background-color: lighten($light-color, 5%);
+}
+
+// Skills Section
+.skills-section {
+  padding: 5rem 2rem;
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .skills-category {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &-title {
+      color: $primary-color;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  .skills-list {
+    list-style: none;
+  }
+
+  .skill-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .skill-name {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .skill-bar {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .skill-level {
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      $primary-color,
+      lighten($primary-color, 15%)
+    );
+    border-radius: 5px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 255, 255, 0.1) 100%
+      );
+      background-size: 200% auto;
+      animation: shine 2s linear infinite;
+    }
+  }
+}
+
+// Contact Section
+.contact-section {
+  padding: 5rem 2rem;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -158,6 +316,30 @@ a {
   color: white;
   text-align: center;
   padding: 2rem;
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-link {
+    color: white;
+    font-size: 1.5rem;
+    @include transition(color);
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+// Animations
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
 }
 
 // Responsive Design
@@ -183,5 +365,17 @@ a {
 
   .section-title {
     font-size: 2rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-image {
+    margin-top: 2rem;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr !important;
   }
 }
