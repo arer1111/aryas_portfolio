@@ -220,40 +220,51 @@ a {
 // Skills Section
 .skills-section {
   padding: 5rem 2rem;
+  background-color: white;
 
   .skills-container {
-    max-width: 1200px;
+    max-width: 1028px;
     margin: 0 auto;
   }
 
   .skills-category {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+  }
+
+  .skills-category-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: $dark-color;
   }
 
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 43px;
+    justify-items: center;
   }
 
   .skill-item {
     @include flex-center;
     flex-direction: column;
+    gap: 0.5rem;
   }
 
   .skill-icon {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     @include transition(transform);
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+    color: $dark-color;
+    text-align: center;
   }
 }
 
@@ -327,13 +338,6 @@ a {
   }
 }
 
-// Animations
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
-}
-
 // Responsive Design
 @media (max-width: 768px) {
   .nav-bar .nav-list {
@@ -369,11 +373,11 @@ a {
 
   .skills-grid {
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 1rem !important;
+    gap: 20px !important;
   }
 
   .skill-icon {
-    width: 60px !important;
-    height: 60px !important;
+    width: 35px !important;
+    height: 35px !important;
   }
 }
