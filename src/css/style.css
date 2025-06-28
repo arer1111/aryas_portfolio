@@ -91,7 +91,7 @@ a {
   background: linear-gradient(135deg, $primary-color, $secondary-color);
   color: white;
   text-align: center;
-  padding-top: 60px; // Account for fixed header
+  padding-top: 60px;
 
   .hero-content {
     max-width: 800px;
@@ -217,55 +217,44 @@ a {
   background-color: lighten($light-color, 5%);
 }
 
-// Skills Section
+// Skills Section - Compact Single Line Version
 .skills-section {
-  padding: 5rem 2rem;
+  padding: 2rem 1rem;
   background-color: white;
+  overflow-x: auto;
 
   .skills-container {
-    max-width: 1028px;
+    max-width: 100%;
     margin: 0 auto;
   }
 
-  .skills-category {
-    margin-top: 2rem;
-  }
-
-  .skills-category-title {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: $dark-color;
-    font-size: 1.5rem;
-  }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 30px;
-    justify-items: center;
+  .skills-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0;
   }
 
   .skill-item {
-    @include flex-center;
+    display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    align-items: center;
+    min-width: 60px;
   }
 
   .skill-icon {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     object-fit: contain;
-    @include transition(transform);
-
-    &:hover {
-      transform: scale(1.2);
-    }
+    margin-bottom: 0.3rem;
   }
 
   .skill-name {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: $dark-color;
-    text-align: center;
+    white-space: nowrap;
     font-weight: 500;
   }
 }
@@ -373,17 +362,22 @@ a {
     margin-top: 2rem;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 15px !important;
+  .skills-row {
+    gap: 1rem;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+  }
+
+  .skill-item {
+    min-width: 50px;
   }
 
   .skill-icon {
-    width: 20px !important;
-    height: 20px !important;
+    width: 14px;
+    height: 14px;
   }
 
   .skill-name {
-    font-size: 0.7rem !important;
+    font-size: 0.6rem;
   }
 }
